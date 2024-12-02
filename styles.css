@@ -22,32 +22,42 @@ body, html {
 
 .button-container {
   display: flex;
-  flex-wrap: wrap; /* Allow buttons to wrap if screen is too narrow */
+  flex-wrap: nowrap; /* Keep buttons in one row */
   justify-content: center;
-  gap: 20px; /* Space between buttons */
+  gap: 20px;
   padding: 20px;
+  background: #1a1a1a; /* Dark background for the button section */
+  border-radius: 15px; /* Smooth edges for container */
 }
 
+/* Button Styling */
 .btn {
-  padding: 15px 30px; /* Better padding for larger clickable area */
-  font-size: 18px; /* Larger font size */
-  color: #fff; /* White text color */
-  background-color: #007BFF; /* Blue background color */
-  border: none; /* Remove border */
-  border-radius: 12px; /* Smooth rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  text-align: center; /* Center text */
-  transition: all 0.3s ease; /* Smooth transitions for hover effects */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow for button elevation */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text */
+  width: 100px; /* Consistent button width */
+  padding: 10px;
+  font-size: 14px; /* Adjusted font size */
+  color: #fff; /* White text */
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Subtle gradient effect */
+  border: 1px solid #444; /* Border for definition */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: inset 2px 2px 5px #101010, inset -2px -2px 5px #2a2a2a; /* Inner shadow for pressed effect */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  transform: translateY(-3px); /* Slight elevation effect */
+  box-shadow: 2px 2px 10px #000, -2px -2px 10px #3a3a3a; /* Elevation on hover */
+  transform: scale(1.05); /* Slight scale effect */
 }
 
 .btn:active {
-  transform: translateY(0); /* Reset when clicked */
+  box-shadow: inset 3px 3px 6px #000, inset -3px -3px 6px #3a3a3a; /* Deep pressed effect */
+  transform: scale(0.95); /* Button press effect */
 }
 
 /* Responsive Design */
