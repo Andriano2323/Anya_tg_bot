@@ -20,26 +20,6 @@ body, html {
   gap: 20px; /* Space between elements */
 }
 
-.header {
-  margin-bottom: 20px;
-}
-
-.profile-img {
-  width: 50%; /* Adjust the percentage as needed */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 200px; /* Optional: Set a maximum width */
-  border-radius: 50%; /* Make the image circular */
-  object-fit: cover;
-  border: 3px solid #fff;
-  background-color: #ccc; /* Fallback background color */
-}
-
-.content {
-  font-size: 1.2em;
-  color: #ddd; /* Light gray for subtext */
-  margin: 10px 0;
-}
-
 .button-container {
   display: flex;
   flex-wrap: wrap; /* Allow buttons to wrap if screen is too narrow */
@@ -75,10 +55,5 @@ body, html {
   .btn {
     font-size: 14px; /* Smaller font for narrow screens */
     padding: 10px 15px;
-  }
-
-  .profile-img {
-    width: 100px;
-    height: 100px;
   }
 }
