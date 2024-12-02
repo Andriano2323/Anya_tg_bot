@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telegram Web App</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Capture user_id from URL params
+    const urlParams = new URLSearchParams(window.location.search);
+    const userId = urlParams.get('user_id') || 'Unknown User';
+  </script>
 </head>
 <body>
   <div class="background">
+    <h1>Welcome, <span id="user-id">User</span>!</h1>
     <div class="button-container">
       <button class="btn" onclick="handleButtonClick('cases')">📂 Cases</button>
       <button class="btn" onclick="handleButtonClick('videos')">🎥 Videos</button>
@@ -15,6 +21,12 @@
       <button class="btn" onclick="handleButtonClick('texts')">📜 Texts</button>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('user-id').textContent = userId;
+
+    function handleButtonClick(action) {
+        alert(`You clicked on: ${action}`);
+    }
+  </script>
 </body>
 </html>

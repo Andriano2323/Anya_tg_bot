@@ -11,14 +11,20 @@ app = Client(
 
 @app.on_message(filters.command(["start"]))
 def start(client, message):
-    message.reply_text(
-        "Click the button below to open the interactive web app!",
-        reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(
-                "Open Web App",
-                web_app=WebAppInfo(url="https://andriano2323.github.io/Anya_tg_bot/")  # Use your hosted Web App
-            )]
-        ])
-    )
+    try:
+        user_id = message.from_user.id
+        web_app_url = f"https://andriano2323.github.io/Anya_tg_bot/?user_id={user_id}"
+        message.reply_text(
+            "👋 Welcome! Click the button below to open the interactive web app.",
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton(
+                    "Open Web App",
+                    web_app=WebAppInfo(url=web_app_url)
+                )]
+            ])
+        )
+    except Exception as e:
+        print(f"Error: {e}")
+        message.reply_text("❌ An error occurred. Please try again later.")
 
 app.run()

@@ -1,43 +1,50 @@
-/* Reset default styles */
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
-  .background {
-    height: 50%;
-    width: 20%;
-    background-image: url('./images/background.jpg'); /* Path to your image */
-    background-size: cover;        /* Ensures the image covers the full screen */
-    background-position: center;   /* Centers the image */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }  
-  
-  .button-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the button area */
-  }
-  
-  .btn {
-    flex: 1;
-    margin: 0 10px;
-    padding: 15px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./images/background.jpg'); /* Ensure the image path is correct */
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.btn {
+  margin: 10px;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}

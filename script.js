@@ -1,15 +1,15 @@
 function handleButtonClick(action) {
     switch (action) {
-      case 'cases':
+      case 'Разборы':
         alert('📂 You clicked on Cases!');
         break;
-      case 'videos':
+      case 'Эфиры':
         alert('🎥 You clicked on Videos!');
         break;
-      case 'mentorship':
+      case 'Менторство':
         alert('🤝 You clicked on Mentorship!');
         break;
-      case 'texts':
+      case 'Кейсы':
         alert('📜 You clicked on Texts!');
         break;
       default:
