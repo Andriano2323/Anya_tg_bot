@@ -16,7 +16,7 @@ def start(client, message):
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton(
                 "Open Web App",
-                web_app=WebAppInfo(url="https://github.com/Andriano2323/Anya_tg_bot/tree/main/web_app")  # Use your hosted Web App
+                web_app=WebAppInfo(url="https://andriano2323.github.io/Anya_tg_bot/")  # Use your hosted Web App
             )]
         ])
     )
