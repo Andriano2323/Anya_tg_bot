@@ -91,6 +91,7 @@ function openVideosModal() {
         const videoElement = document.createElement("video");
         videoElement.src = video;
         videoElement.controls = true; // Add video controls
+        videoElement.playsInline = true; // Ensure compatibility with iOS
         videoElement.classList.add("gallery-video"); // Optional styling class
         gallery.appendChild(videoElement);
     });

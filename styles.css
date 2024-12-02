@@ -230,9 +230,20 @@ body, html {
 }
 
 .gallery-video {
-  width: 300px; /* Adjust as needed */
-  height: auto;
-  margin: 10px;
+  width: 90%; /* Take up most of the screen width */
+  max-width: 600px; /* Cap the maximum width */
+  height: auto; /* Maintain the aspect ratio */
   border: 2px solid white;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column; /* Arrange videos in a vertical column */
+  justify-content: flex-start; /* Align videos to the top */
+  align-items: center; /* Center videos horizontally */
+  gap: 15px; /* Add spacing between videos */
+  padding: 20px;
+  max-height: 90vh; /* Prevent overflow on smaller screens */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
