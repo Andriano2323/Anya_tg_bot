@@ -32,13 +32,30 @@
     </div>
   </div>
 
+  <!-- Mentorship Form -->
+  <div id="mentorshipForm" class="form-container" style="display: none;">
+    <span class="close" onclick="closeMentorshipForm()">&times;</span>
+    <h1>Лист ожидания на программы Анны Горбуновой</h1>
+    <form>
+      <label for="name">Ваше имя и фамилия</label>
+      <input type="text" id="name" placeholder="Анна Горбунова" required>
+      <label for="phone">Телефон</label>
+      <input type="tel" id="phone" placeholder="+7 (999) 999-99-99" required>
+      <label for="request">Ваш запрос</label>
+      <textarea id="request" placeholder="Выйти на доход от 300 тыс/месяц" required></textarea>
+      <label for="social">Ссылка или ник в соц.сетях (по желанию)</label>
+      <input type="text" id="social" placeholder="@anya_mangolife">
+      <button type="submit">Оставить заявку</button>
+    </form>
+  </div>
+
   <!-- Full-Screen Image Modal -->
   <div id="fullscreenModal" class="fullscreen-modal">
     <span class="close" onclick="closeFullscreenModal()">&times;</span>
     <img id="fullscreenImage" class="fullscreen-image" src="">
   </div>
 
-  <!-- Include the external JavaScript file -->
+  <!-- Include only the external JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>

@@ -25,6 +25,7 @@ function handleButtonClick(action) {
         case 'mentorship':
             console.log("Mentorship button clicked!");
             // Add code to handle mentorship button click
+            document.getElementById('mentorshipForm').style.display = 'block';
             break;
         case 'texts':
             console.log("Texts button clicked!");
@@ -120,3 +121,30 @@ function closeFullscreenModal() {
     const fullscreenModal = document.getElementById('fullscreenModal');
     fullscreenModal.style.display = "none";
 }
+
+// Get the mentorship button and form container
+const mentorshipButton = document.querySelector('.btn-mentorship'); // Add a specific class to your mentorship button
+const mentorshipForm = document.getElementById('mentorshipForm');
+
+// Add click event listener
+mentorshipButton.addEventListener('click', () => {
+  mentorshipForm.style.display = 'block'; // Show the form
+});
+
+// Close the form when submitted or implement other logic
+document.querySelector('.form-container form').addEventListener('submit', (e) => {
+  e.preventDefault(); // Prevent default form submission for now
+  alert('Форма отправлена!');
+  mentorshipForm.style.display = 'none'; // Hide the form
+});
+
+function closeMentorshipForm() {
+    document.getElementById('mentorshipForm').style.display = 'none';
+  }
+  
+document.addEventListener('click', (e) => {
+  const mentorshipForm = document.getElementById('mentorshipForm');
+  if (mentorshipForm.style.display === 'block' && !mentorshipForm.contains(e.target)) {
+    mentorshipForm.style.display = 'none';
+  }
+});
