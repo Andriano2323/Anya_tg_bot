@@ -36,7 +36,10 @@ body, html {
 
 /* Button Styling */
 .btn {
+  flex: 1; /* Allow buttons to grow and shrink */
+  max-width: 25%; /* Cap width to avoid oversized buttons */
   padding: 25px 30px; /* Larger padding for a bigger clickable area */
+  font-size: 1.2rem; /* Scale font size relative to the screen */
   background-color: #050801; /* Button background color */
   color: #F5DEB3; /* Glow text color */
   font-weight: bold;
@@ -77,11 +80,23 @@ body, html {
   }
 
   .btn {
-    width: auto; /* Adjust size to fit content */
-    font-size: 14px; /* Adjusted font for smaller screens */
-    padding: 20px 25px; /* Reduced padding */
+    flex: 1 1 45%; /* Allow buttons to take up half the width */
+    max-width: 45%; /* Prevent buttons from stretching too wide */
+    padding: 15px 10px; /* Reduce padding for smaller screens */
+    font-size: 1rem; /* Adjust font size */
   }
 }
+
+/* Further reduce button size on very small screens */
+@media (max-width: 480px) {
+  .btn {
+    flex: 1 1 100%; /* Buttons span full width */
+    max-width: 100%; /* Ensure full width for buttons */
+    padding: 10px 5px; /* Further reduce padding */
+    font-size: 0.9rem; /* Adjust font size for very small screens */
+  }
+}
+
 
 /* Modal styles */
 .modal {
