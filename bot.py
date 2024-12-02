@@ -12,13 +12,12 @@ app = Client(
 @app.on_message(filters.command(["start"]))
 def start(client, message):
     try:
-        user_id = message.from_user.id
-        web_app_url = f"https://andriano2323.github.io/Anya_tg_bot/?user_id={user_id}"
+        web_app_url = "https://andriano2323.github.io/Anya_tg_bot/"  # Static URL without user_id
         message.reply_text(
-            "👋 Добро пожаловать в бот.",
+            "👋 Добро пожаловать!",
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton(
-                    "Запустить бот!",
+                    "Запустить бот.",
                     web_app=WebAppInfo(url=web_app_url)
                 )]
             ])

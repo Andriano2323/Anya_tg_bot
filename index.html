@@ -5,31 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telegram Web App</title>
   <link rel="stylesheet" href="styles.css">
-  <script>
-    // Capture user_id from URL params
-    const urlParams = new URLSearchParams(window.location.search);
-    const userId = urlParams.get('user_id') || 'Unknown User';
-  </script>
 </head>
 <body>
   <div class="container">
     <div class="header">
       <img src="images/profile.jpg" alt="Profile" class="profile-img">
-      <h1 class="welcome-text">Welcome, <span id="user-id">User</span>!</h1>
     </div>
     <div class="content">
       <p>WorkBook on Launches</p>
     </div>
     <div class="button-container">
-      <button class="btn" onclick="handleButtonClick('Кейсы')">📂 Кейсы</button>
-      <button class="btn" onclick="handleButtonClick('Эфиры')">🎥 Эфиры</button>
-      <button class="btn" onclick="handleButtonClick('Менторство')">🤝 Менторство</button>
-      <button class="btn" onclick="handleButtonClick('Разборы')">📜 Разборы</button>
+      <button class="btn" onclick="handleButtonClick('cases')">📂 Cases</button>
+      <button class="btn" onclick="handleButtonClick('videos')">🎥 Videos</button>
+      <button class="btn" onclick="handleButtonClick('mentorship')">🤝 Mentorship</button>
+      <button class="btn" onclick="handleButtonClick('texts')">📜 Texts</button>
     </div>
   </div>
   <script>
-    document.getElementById('user-id').textContent = userId;
-
     function handleButtonClick(action) {
       alert(`You clicked on: ${action}`);
     }
