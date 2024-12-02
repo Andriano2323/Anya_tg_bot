@@ -40,38 +40,33 @@ body, html {
   max-width: 150px; /* Optional: Limit button width */
   height: 50px; /* Adjust button height */
   font-size: 14px; /* Adjust font size */
-  padding: 0; /* Remove extra padding */
-}
-
-/*.btn {
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px; /* Space between icon and text 
-  width: 100px; /* Consistent button width 
-  padding: 10px;
-  font-size: 14px; /* Adjusted font size 
-  color: #fff; /* White text 
-  background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Subtle gradient effect 
-  border: 1px solid #444; /* Border for definition 
-  border-radius: 10px; /* Rounded corners 
-  box-shadow: inset 2px 2px 5px #101010, inset -2px -2px 5px #2a2a2a; /* Inner shadow for pressed effect 
+  color: #fff; /* White text */
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Subtle gradient effect */
+  border: 1px solid #444; /* Border for definition */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: inset 2px 2px 5px #101010, inset -2px -2px 5px #2a2a2a; /* Inner shadow for pressed effect */
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover/active effects */
+  display: flex; /* Align icon and text vertically */
+  flex-direction: column; /* Stack icon above text */
+  align-items: center; /* Center icon and text */
+  justify-content: center; /* Center everything */
+  gap: 8px; /* Space between icon and text */
+  padding: 10px; /* Add internal padding */
 }
-*/
 
+/* Hover Effect */
 .btn:hover {
-  box-shadow: 2px 2px 10px #000, -2px -2px 10px #3a3a3a; /* Elevation on hover */
+  box-shadow: 2px 2px 10px #000, -2px -2px 10px #3a3a3a; /* Elevated shadow effect */
   transform: scale(1.05); /* Slight scale effect */
 }
 
+/* Active (Pressed) Effect */
 .btn:active {
   box-shadow: inset 3px 3px 6px #000, inset -3px -3px 6px #3a3a3a; /* Deep pressed effect */
   transform: scale(0.95); /* Button press effect */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
