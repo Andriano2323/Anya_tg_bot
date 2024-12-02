@@ -17,56 +17,20 @@
   </div>
 
   <!-- Cases Gallery Modal -->
-<div id="casesModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <div class="modal-content" id="gallery">
-    <!-- Images will be dynamically added here -->
+  <div id="casesModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content" id="gallery">
+      <!-- Images will be dynamically added here -->
+    </div>
   </div>
-</div>
 
-<script>
-  function handleButtonClick(action) {
-    if (action === 'cases') {
-      openModal();
-    } else {
-      alert(`You clicked on: ${action}`);
-    }
-  }
+  <!-- Full-Screen Image Modal -->
+  <div id="fullscreenModal" class="fullscreen-modal">
+    <span class="close" onclick="closeFullscreenModal()">&times;</span>
+    <img id="fullscreenImage" class="fullscreen-image" src="">
+  </div>
 
-  function openModal() {
-    const modal = document.getElementById('casesModal');
-    modal.style.display = "block";
-
-    const images = [
-      "images/cases/case_1.jpg",
-      "images/cases/case_2.jpg",
-      "images/cases/case_3.jpg",
-      "images/cases/case_4.jpg",
-      "images/cases/case_6.jpg",
-      "images/cases/case_7.jpg",
-      "images/cases/case_8.jpg",
-      "images/cases/case_9.jpg",
-      "images/cases/case_10.jpg",
-      "images/cases/case_11.jpg",
-      "images/cases/case_12.jpg",
-      "images/cases/case_13.jpg"
-    ];
-
-    const gallery = document.getElementById("gallery");
-    gallery.innerHTML = ""; // Clear existing content
-    images.forEach(image => {
-      const imgElement = document.createElement("img");
-      imgElement.src = image;
-      imgElement.classList.add("gallery-image");
-      gallery.appendChild(imgElement);
-    });
-  }
-
-  function closeModal() {
-    const modal = document.getElementById('casesModal');
-    modal.style.display = "none";
-  }
-</script>
-
+  <!-- Include the external JavaScript file -->
+  <script src="script.js"></script>
 </body>
 </html>
