@@ -1,8 +1,12 @@
-
-// Ensure modal is hidden on page load
+// Ensure modals are hidden on page load
 document.addEventListener('DOMContentLoaded', () => {
     const fullscreenModal = document.getElementById('fullscreenModal');
-    fullscreenModal.style.display = 'none'; // Explicitly hide the modal
+    const casesModal = document.getElementById('casesModal');
+    const videosModal = document.getElementById('videosModal');
+
+    fullscreenModal.style.display = 'none'; // Explicitly hide full-screen modal
+    casesModal.style.display = 'none'; // Explicitly hide cases modal
+    videosModal.style.display = 'none'; // Explicitly hide videos modal
 });
 
 // Function to handle button clicks
@@ -16,16 +20,15 @@ function handleButtonClick(action) {
             }, neonEffectDuration);
             break;
         case 'videos':
-            console.log("Videos button clicked!");
-            // Add code to handle 'videos' button click here
+            openVideosModal(); // Open videos modal
             break;
         case 'mentorship':
             console.log("Mentorship button clicked!");
-            // Add code to handle 'mentorship' button click here
+            // Add code to handle mentorship button click
             break;
         case 'texts':
             console.log("Texts button clicked!");
-            // Add code to handle 'texts' button click here
+            // Add code to handle texts button click
             break;
         default:
             console.log('Unknown action: ' + action);
@@ -67,10 +70,36 @@ function openCasesModal() {
     });
 }
 
-// Function to close the cases gallery modal
-function closeModal() {
-    const modal = document.getElementById('casesModal');
-    modal.style.display = "none";
+// Function to open the videos modal
+function openVideosModal() {
+    const modal = document.getElementById('videosModal');
+    modal.style.display = "block";
+
+    // Array of video paths
+    const videos = [
+        "videos/video_1.mp4",
+        "videos/video_2.mp4",
+        "videos/video_3.mp4"
+    ];
+
+    // Clear previous gallery content
+    const gallery = document.getElementById('videosGallery');
+    gallery.innerHTML = "";
+
+    // Dynamically add videos to the gallery
+    videos.forEach(video => {
+        const videoElement = document.createElement("video");
+        videoElement.src = video;
+        videoElement.controls = true; // Add video controls
+        videoElement.classList.add("gallery-video"); // Optional styling class
+        gallery.appendChild(videoElement);
+    });
+}
+
+// Function to close modals
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) modal.style.display = "none";
 }
 
 // Function to open the full-screen image modal
@@ -84,7 +113,6 @@ function openFullscreenModal(imageSrc) {
     fullscreenImage.src = imageSrc; // Set the selected image as full-screen image
     fullscreenModal.style.display = "flex"; // Use flex to center the modal content
 }
-
 
 // Function to close the full-screen image modal
 function closeFullscreenModal() {
