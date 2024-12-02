@@ -237,7 +237,7 @@ body, html {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.modal-content {
+.videos-modal-content {
   display: flex;
   flex-direction: column; /* Arrange videos in a vertical column */
   justify-content: flex-start; /* Align videos to the top */
