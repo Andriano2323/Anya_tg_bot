@@ -6,8 +6,8 @@ body, html {
   }
   
   .background {
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 20%;
     background-image: url('./images/background.jpg'); /* Path to your image */
     background-size: cover;        /* Ensures the image covers the full screen */
     background-position: center;   /* Centers the image */
