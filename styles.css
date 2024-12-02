@@ -29,45 +29,45 @@ body, html {
   display: flex;
   justify-content: space-around; /* Space buttons evenly */
   padding: 10px 10px; /* Equal padding on left and right */
-  background: #1a1a1a; /* Background for contrast */
+  background: #050801; /* Match button background */
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Shadow above buttons */
   box-sizing: border-box; /* Ensure padding is included in width calculations */
 }
 
 /* Button Styling */
 .btn {
-  flex: 1; /* Allow buttons to grow and shrink equally */
-  margin: 0 5px; /* Add spacing between buttons */
-  max-width: 150px; /* Optional: Limit button width */
-  height: 50px; /* Adjust button height */
-  font-size: 14px; /* Adjust font size */
-  color: #fff; /* White text */
-  background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Subtle gradient effect */
-  border: 1px solid #444; /* Border for definition */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: inset 2px 2px 5px #101010, inset -2px -2px 5px #2a2a2a; /* Inner shadow for pressed effect */
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover/active effects */
-  display: flex; /* Align icon and text vertically */
-  flex-direction: column; /* Stack icon above text */
-  align-items: center; /* Center icon and text */
-  justify-content: center; /* Center everything */
+  padding: 25px 30px; /* Larger padding for a bigger clickable area */
+  background-color: #050801; /* Button background color */
+  color: #F5DEB3; /* Glow text color */
+  font-weight: bold;
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  letter-spacing: 4px; /* Text spacing */
+  overflow: hidden; /* Prevent overflow effects */
+  transition: 0.5s; /* Smooth transitions for hover/active effects */
+  cursor: pointer; /* Pointer cursor */
+  text-align: center; /* Center text alignment */
+  display: flex; /* For icon and text alignment */
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center icon and text horizontally */
   gap: 8px; /* Space between icon and text */
-  padding: 10px; /* Add internal padding */
 }
 
 /* Hover Effect */
 .btn:hover {
-  box-shadow: 2px 2px 10px #000, -2px -2px 10px #3a3a3a; /* Elevated shadow effect */
-  transform: scale(1.05); /* Slight scale effect */
+  background: #F5DEB3; /* Glow background on hover */
+  color: #050801; /* Invert text color */
+  box-shadow: 0 0 5px #F5DEB3,
+              0 0 25px #F5DEB3,
+              0 0 50px #F5DEB3,
+              0 0 200px #F5DEB3; /* Glow effect */
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); /* Reflective effect */
 }
 
 /* Active (Pressed) Effect */
 .btn:active {
-  box-shadow: inset 3px 3px 6px #000, inset -3px -3px 6px #3a3a3a; /* Deep pressed effect */
   transform: scale(0.95); /* Button press effect */
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -77,8 +77,9 @@ body, html {
   }
 
   .btn {
-    width: 80px; /* Smaller button size */
-    font-size: 12px; /* Adjusted font for smaller screens */
+    width: auto; /* Adjust size to fit content */
+    font-size: 14px; /* Adjusted font for smaller screens */
+    padding: 20px 25px; /* Reduced padding */
   }
 }
 
@@ -133,4 +134,3 @@ body, html {
   text-decoration: none;
   cursor: pointer;
 }
-
