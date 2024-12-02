@@ -3,40 +3,81 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  box-sizing: border-box; /* Ensure consistent sizing across elements */
 }
 
-.background {
-  height: 50%;
-  width: 20%;
-  background-image: url('./images/background.jpg'); /* Path to your image */
-  background-size: cover;        /* Ensures the image covers the full screen */
-  background-position: center;   /* Centers the image */
+.container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-}  
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('./images/background.jpg'); /* Path to your background image */
+  background-size: cover;        /* Ensures the image covers the full screen */
+  background-position: center;   /* Centers the image */
+  color: white;
+  text-align: center;
+  gap: 20px; /* Space between elements */
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  background-color: #ccc; /* Fallback background color */
+}
+
+.content {
+  font-size: 1.2em;
+  color: #ddd; /* Light gray for subtext */
+  margin: 10px 0;
+}
 
 .button-container {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap; /* Allow buttons to wrap if screen is too narrow */
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the button area */
 }
 
 .btn {
-  flex: 1;
-  margin: 0 10px;
-  padding: 15px;
+  padding: 15px 20px; /* Better padding for larger clickable area */
   font-size: 16px;
   color: #fff;
   background-color: #007BFF;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* Smooth rounded corners */
   cursor: pointer;
   text-align: center;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease; /* Smooth transitions for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow for button elevation */
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Slight elevation effect */
+}
+
+.btn:active {
+  transform: translateY(0); /* Reset when clicked */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn {
+    font-size: 14px; /* Smaller font for narrow screens */
+    padding: 10px 15px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
 }
