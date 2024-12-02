@@ -7,14 +7,24 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="background">
+  <div class="container">
+    <div class="header">
+      <img src="images/profile.jpg" alt="Profile Picture" class="profile-img">
+    </div>
+    <div class="content">
+      <p>WorkBook on Launches</p>
+    </div>
     <div class="button-container">
-      <button class="btn" onclick="handleButtonClick('Разборы')">📂 Разборы</button>
-      <button class="btn" onclick="handleButtonClick('Эфиры')">🎥 Эфиры</button>
-      <button class="btn" onclick="handleButtonClick('Менторство')">🤝 Менторство</button>
-      <button class="btn" onclick="handleButtonClick('Кейсы')">📜 Кейсы</button>
+      <button class="btn" onclick="handleButtonClick('cases')">📂 Кейсы</button>
+      <button class="btn" onclick="handleButtonClick('videos')">🎥 Эфиры</button>
+      <button class="btn" onclick="handleButtonClick('mentorship')">🤝 Менторство</button>
+      <button class="btn" onclick="handleButtonClick('texts')">📜 Разборы</button>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script>
+    function handleButtonClick(action) {
+      alert(`You clicked on: ${action}`);
+    }
+  </script>
 </body>
 </html>
