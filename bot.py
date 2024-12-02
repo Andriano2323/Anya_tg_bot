@@ -1,4 +1,16 @@
 from pyrogram import Client, filters
+"""
+This script creates a Telegram bot using the Pyrogram library. The bot is designed to promote Telegram channels and groups.
+Modules:
+Functions:
+    start(client, message): Handles the /start command and sends a welcome message with an inline keyboard button.
+Bot Instance:
+    app: An instance of the Client class, initialized with the bot's API credentials.
+Handlers:
+    @app.on_message(filters.command(["start"])): Registers the start function to handle the /start command.
+Execution:
+    app.run(): Starts the bot.
+"""
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 
 # Create the bot instance
@@ -12,10 +24,10 @@ app = Client(
 @app.on_message(filters.command(["start"]))
 def start(client, message):
     message.reply_text(
-        "Click the button below to open the interactive web app!",
+        "Добро пожаловать. Я бот для продвижения ваших каналов и групп в Telegram.",
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton(
-                "Open Web App",
+                "Запустить бот!",
                 web_app=WebAppInfo(url="https://andriano2323.github.io/Anya_tg_bot/")  # Use your hosted Web App
             )]
         ])
