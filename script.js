@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleButtonClick(action) {
     switch (action) {
         case 'cases':
-            openCasesModal();
+            // Delay opening the modal until after the neon effect
+            const neonEffectDuration = 600; // Matches the CSS transition duration in milliseconds
+            setTimeout(() => {
+                openCasesModal(); // Open the modal after the effect
+            }, neonEffectDuration);
             break;
         case 'videos':
             console.log("Videos button clicked!");
