@@ -15,10 +15,10 @@ def start(client, message):
         user_id = message.from_user.id
         web_app_url = f"https://andriano2323.github.io/Anya_tg_bot/?user_id={user_id}"
         message.reply_text(
-            "👋 Welcome! Click the button below to open the interactive web app.",
+            "👋 Добро пожаловать в бот.",
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton(
-                    "Open Web App",
+                    "Запустить бот!",
                     web_app=WebAppInfo(url=web_app_url)
                 )]
             ])

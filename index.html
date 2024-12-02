@@ -12,20 +12,26 @@
   </script>
 </head>
 <body>
-  <div class="background">
-    <h1>Welcome, <span id="user-id">User</span>!</h1>
+  <div class="container">
+    <div class="header">
+      <img src="images/profile.jpg" alt="Profile" class="profile-img">
+      <h1 class="welcome-text">Welcome, <span id="user-id">User</span>!</h1>
+    </div>
+    <div class="content">
+      <p>WorkBook on Launches</p>
+    </div>
     <div class="button-container">
-      <button class="btn" onclick="handleButtonClick('cases')">📂 Cases</button>
-      <button class="btn" onclick="handleButtonClick('videos')">🎥 Videos</button>
-      <button class="btn" onclick="handleButtonClick('mentorship')">🤝 Mentorship</button>
-      <button class="btn" onclick="handleButtonClick('texts')">📜 Texts</button>
+      <button class="btn" onclick="handleButtonClick('Кейсы')">📂 Cases</button>
+      <button class="btn" onclick="handleButtonClick('Эфиры')">🎥 Videos</button>
+      <button class="btn" onclick="handleButtonClick('Менторство')">🤝 Mentorship</button>
+      <button class="btn" onclick="handleButtonClick('Разборы')">📜 Texts</button>
     </div>
   </div>
   <script>
     document.getElementById('user-id').textContent = userId;
 
     function handleButtonClick(action) {
-        alert(`You clicked on: ${action}`);
+      alert(`You clicked on: ${action}`);
     }
   </script>
 </body>
