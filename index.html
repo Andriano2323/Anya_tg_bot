@@ -15,5 +15,49 @@
       <button class="btn" onclick="handleButtonClick('texts')">📜 Разборы</button>
     </div>
   </div>
+
+  <!-- Cases Gallery Modal -->
+<div id="casesModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="modal-content" id="gallery">
+    <!-- Images will be dynamically added here -->
+  </div>
+</div>
+
+<script>
+  function handleButtonClick(action) {
+    if (action === 'cases') {
+      openModal();
+    } else {
+      alert(`You clicked on: ${action}`);
+    }
+  }
+
+  function openModal() {
+    const modal = document.getElementById('casesModal');
+    modal.style.display = "block";
+
+    const images = [
+      "images/cases/image1.jpg",
+      "images/cases/image2.jpg",
+      "images/cases/image3.jpg"
+    ];
+
+    const gallery = document.getElementById("gallery");
+    gallery.innerHTML = ""; // Clear existing content
+    images.forEach(image => {
+      const imgElement = document.createElement("img");
+      imgElement.src = image;
+      imgElement.classList.add("gallery-image");
+      gallery.appendChild(imgElement);
+    });
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('casesModal');
+    modal.style.display = "none";
+  }
+</script>
+
 </body>
 </html>
