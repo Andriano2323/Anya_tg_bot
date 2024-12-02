@@ -73,6 +73,32 @@ body, html {
   transform: scale(0.95); /* Button press effect */
 }
 
+/* Keyframe Animation for Glow Effect */
+@keyframes fasterNeonGlow {
+  0% {
+    box-shadow: 0 0 5px #F5DEB3, 
+                0 0 15px #F5DEB3, 
+                0 0 30px #F5DEB3, 
+                0 0 50px #F5DEB3;
+  }
+  50% {
+    box-shadow: 0 0 10px #F5DEB3, 
+                0 0 30px #F5DEB3, 
+                0 0 60px #F5DEB3, 
+                0 0 90px #F5DEB3;
+  }
+  100% {
+    box-shadow: 0 0 5px #F5DEB3, 
+                0 0 15px #F5DEB3, 
+                0 0 30px #F5DEB3, 
+                0 0 50px #F5DEB3;
+  }
+}
+
+/* Apply Animation to Hover State */
+.btn:hover {
+  animation: fasterNeonGlow 0.6s infinite; /* Shorter duration for faster animation */
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .button-container {
