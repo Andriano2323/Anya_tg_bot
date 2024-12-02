@@ -29,14 +29,14 @@ body, html {
 }
 
 .btn {
-  padding: 15px 20px; /* Better padding for larger clickable area */
-  font-size: 16px;
-  color: #fff;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 8px; /* Smooth rounded corners */
-  cursor: pointer;
-  text-align: center;
+  padding: 15px 30px; /* Better padding for larger clickable area */
+  font-size: 18px; /* Larger font size */
+  color: #fff; /* White text color */
+  background-color: #007BFF; /* Blue background color */
+  border: none; /* Remove border */
+  border-radius: 12px; /* Smooth rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Center text */
   transition: all 0.3s ease; /* Smooth transitions for hover effects */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow for button elevation */
 }
@@ -53,7 +53,7 @@ body, html {
 /* Responsive Design */
 @media (max-width: 768px) {
   .btn {
-    font-size: 14px; /* Smaller font for narrow screens */
-    padding: 10px 15px;
+    font-size: 16px; /* Smaller font for narrow screens */
+    padding: 10px 20px;
   }
 }
